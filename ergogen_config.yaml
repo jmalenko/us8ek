@@ -14,8 +14,8 @@ units:
   # Parameters
   kx: U
   ky: U
-  rotation: 18
   plate_thickness: mx_plate_thickness
+  rotation: 18 # the angle between the left and right side is double this value
 points:
   zones:
     matrix:
