@@ -143,7 +143,18 @@ points:
     ref: matrix_inner_home
     distance: 46
 outlines:
-  outline:
+  # Pure key outline.
+  _raw:
+    - what: rectangle
+      where: true
+      size: [kx+2, ky+2]
+  # Key outlines with 0.5mm removed to show key overlaps.
+  _keys:
+    - what: rectangle
+      where: true
+      size: [kx-0.5, ky-0.5]
+  # PCB board outline.
+  board:
     - what: polygon
       operation: stack
       points:
@@ -165,6 +176,9 @@ outlines:
           shift: [0.5kx, -0.5ky]
         - ref: nav_right_fn
           shift: [0.5kx, 0.5ky]
+  # Combination preview showing outline and keys.
+  check_key_overlaps:
+    [ board, -_keys]
   _bottom_arch_circle_left:
     - what: circle
       radius: 150
@@ -178,7 +192,7 @@ outlines:
         ref: mirror_matrix_outer_mod
         shift: [66, -150]
   _main: [
-      +outline,
+      +board,
       #-_bottom_arch_circle_left,
       #-_bottom_arch_circle_right # Bug in Ergogen - the case is not generated when using this circle
   ]
@@ -192,27 +206,26 @@ outlines:
       where:
         ref: func_f12
         shift: [1kx, 0.35ky]
-  combined: [
-      _fillet,
-      -_usb_c_cutout
-  ]
+  board_rounded:
+#    [ _fillet, -_usb_c_cutout ]
+    [ _fillet ]
   _switch_cutouts:
     - what: rectangle
       where: true
       asym: source
       size: 14 # Plate cutouts are 14mm * 14mm for both MX and Choc
       bound: false
-  switch_plate:
-    [ combined, -_switch_cutouts]
+  switch_plate_outline:
+    [ board_rounded, -_switch_cutouts]
+#pcbs:
 cases:
-  switchplate:
+  switch_plate_case:
     - what: outline
-      name: switch_plate
+      name: switch_plate_outline
       extrude: plate_thickness
       shift: [-85, -40, 0]
   bottom:
     - what: outline
-      name: combined
+      name: board_rounded
       extrude: plate_thickness
       shift: [-85, -40, 0]
- 
