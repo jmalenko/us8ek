@@ -14,10 +14,26 @@ units:
   # Parameters
   kx: U
   ky: U
-  plate_thickness: mx_plate_thickness
   rotation: 18 # the angle between the left and right side is double this value
 
+  # Case
+  plate_thickness: mx_plate_thickness
+  height_inner: 4
+  height_total: height_inner + 2 * plate_thickness
+
   wall_thickness: 1
+  screw_radius: 1 # M2 screw
+  
+  # Threaded screw inserts.
+  # They're 3.2mm wide, and 3mm tall. All you need to do to add them to your design is create a hole that's 3mm in diameter and 3mm tall. Then you use a soldering iron to warm up the screw insert and melt the last 0.2mm of plastic.
+  nut_inner_radius: 1.5
+  nut_outer_radius: nut_inner_radius + 1.6
+  nut_height: 3
+
+  hole_radius: screw_radius + 0.5
+  
+  # To check that that switch cutouts don't overlap with threaded screw inserts, use:
+  # hole_radius: nut_outer_radius
 points:
   zones:
     matrix:
@@ -178,74 +194,71 @@ outlines:
           shift: [0.5kx, -0.5ky]
         - ref: nav_right_fn
           shift: [0.5kx, 0.5ky]
-  board_with_wall:
-    - what: polygon
-      operation: stack
-      points:
-        - ref: func_esc
-          shift: [-0.5kx-wall_thickness, 0.5ky+wall_thickness]
-        - ref: func_esc
-          shift: [-0.5kx-wall_thickness, -5.5ky-wall_thickness]
-#        - ref: matrix_outer_mod
-#          shift: [-kx, -ky]
-        - ref: thumb_x_x
-          shift: [0.4kx+wall_thickness, -0.4ky-wall_thickness]
-        - ref: mirror_thumb_x_x
-          shift: [0.4kx+wall_thickness, -0.4ky-wall_thickness]
-#        - ref: mirror_matrix_outer_mod
-#          shift: [kx, -ky]
-        - ref: nav_right_mod
-          shift: [-2.3kx-wall_thickness, -0.5ky-wall_thickness]
-        - ref: nav_right_mod
-          shift: [0.5kx+wall_thickness, -0.5ky-wall_thickness]
-        - ref: nav_right_fn
-          shift: [0.5kx+wall_thickness, 0.5ky+wall_thickness]
   # Combination preview showing outline and keys.
   check_key_overlaps:
     [ board, -_keys]
+  mounting_holes:
+    # Left
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [matrix_outer_num]
+        shift: [-0.5kx, 0.6ky]
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [matrix_ring_mod]
+        shift: [0kx, -0.7ky]
+
+    # Center
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [extra_center_asym_x_x]
+        shift: [0kx, 3.7ky]
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [extra_center_asym_x_x]
+        shift: [0kx, -1.9ky]
+
+    # Right
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [mirror_matrix_outer_num]
+        shift: [-0.5kx, 0.6ky]
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [mirror_matrix_ring_mod]
+        shift: [0kx, -0.7ky]
+
+    # Num
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [nav_right_home]
+        shift: [-0.6kx, 0.4ky]
   _board_fillet:
     - what: outline
       name: board
       fillet: 6
-  _board_with_wall_fillet:
-    - what: outline
-      name: board_with_wall
-      fillet: 6+wall_thickness
   _switch_cutouts:
     - what: rectangle
       where: true
       asym: source
       size: 14 # Plate cutouts are 14mm * 14mm for both MX and Choc
       bound: false
-  switch_plate_outline:
+  switch_plate:
     [ _board_fillet, -_switch_cutouts]
+  switch_plate_3dprint:
+    [ _board_fillet, -_switch_cutouts, -mounting_holes]
 #pcbs:
-cases:
-  top_without_wall:
-    - what: outline
-      name: switch_plate_outline
-      extrude: plate_thickness
-  _outerWall:
-    - name: _board_with_wall_fillet
-      extrude: 4+2*plate_thickness
-  _innerWall:
-    - name: _board_fillet
-      extrude: 4+2*plate_thickness
-  wall:
-    - what: case
-      name: _outerWall
-      operation: add
-    - what: case
-      name: _innerWall
-      operation: subtract
-  top_with_wall:
-    - what: case
-      name: top_without_wall
-      operation: add
-    - what: case
-      name: wall
-      operation: add
-  bottom:
-    - what: outline
-      name: _board_fillet
-      extrude: plate_thickness
+
+# Case is modelled in Fusion 360 based on switch_plate_3dprint.dxf
+#cases:
+#  switch_plate:
+#    - what: outline
+#      name: switch_plate
+#      extrude: plate_thickness
