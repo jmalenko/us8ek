@@ -28,9 +28,10 @@ units:
   # They're 3.2mm wide, and 3mm tall. All you need to do to add them to your design is create a hole that's 3mm in diameter and 3mm tall. Then you use a soldering iron to warm up the screw insert and melt the last 0.2mm of plastic.
   nut_inner_radius: 1.5
   nut_outer_radius: nut_inner_radius + 1.6
-  nut_height: 3
+  nut_height_real: 3
+  nut_height: nut_height_real + 0.5
 
-  hole_radius: screw_radius + 0.5
+  hole_radius: screw_radius + 0.2
   
   # To check that that switch cutouts don't overlap with threaded screw inserts, use:
   # hole_radius: nut_outer_radius
