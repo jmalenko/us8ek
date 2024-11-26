@@ -199,18 +199,14 @@ outlines:
           shift: [-0.5kx, 0.5ky]
         - ref: func_esc
           shift: [-0.5kx, -5.5ky]
-#        - ref: matrix_outer_mod
-#          shift: [-kx, -ky]
-#        - ref: thumb_x_x
-#          shift: [0.4kx, -0.4ky]
+#        - ref: func_f1
+#          shift: [-0.4kx, -5.85ky]
+#        - ref: func_f1
+#          shift: [2.4kx, -5.85ky]
         - ref: func_f6
-          shift: [-0.4kx, -7.25ky]
-#        - ref: mirror_thumb_x_x
-#          shift: [0.4kx, -0.4ky]
-#        - ref: mirror_matrix_outer_mod
-#          shift: [kx, -ky]
+          shift: [-0.35kx, -7.25ky]
         - ref: func_f7
-          shift: [0.4kx, -7.25ky]
+          shift: [0.35kx, -7.25ky]
         - ref: nav_right_mod
           shift: [-2.4kx, -0.5ky]
         - ref: nav_right_mod
