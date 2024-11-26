@@ -141,7 +141,7 @@ points:
       key.asym: left
       anchor:
         ref: func_f12
-        shift: [1.45kx, -6.4ky] # Remember cutout for usb connector
+        shift: [1.45kx, -6.53ky] # Remember cutout for usb connector
       columns:
         x:
       rows:
