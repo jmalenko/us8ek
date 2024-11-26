@@ -59,10 +59,18 @@ points:
     thumb:
       anchor:
         ref: matrix_inner_mod
-        shift: [1.05kx, -7]
+        shift: [1.15kx, -0.25ky]
       columns:
         x:
           key.splay: -30
+      rows:
+        x:
+    extra_center_sym:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [kx, -0.1ky]
+      columns:
+        x:
       rows:
         x:
     func:
@@ -133,7 +141,7 @@ points:
       key.asym: left
       anchor:
         ref: func_f12
-        shift: [1.45*kx, -6.4*ky] # Remember cutout for usb connector
+        shift: [1.45kx, -6.4ky] # Remember cutout for usb connector
       columns:
         x:
       rows:
@@ -144,26 +152,28 @@ points:
       key.asym: left
       anchor:
         ref: func_f12
-        shift: [1.2*kx, 0*ky]
+        shift: [1.2kx, 0ky]
       columns:
         x:
       rows:
         x:
-    extra_center_sym:
-      anchor:
-        ref: matrix_inner_bottom
-        shift: [kx, -0.1*ky]
-      columns:
-        x:
-      rows:
-        x:
-    extra_center_asym:
+    extra_center_asym1:
       key.asym: left
       anchor:
         ref: func_f6
-        shift: [0.5*kx, -4.4*ky] # TODO calclulate position exactly
+        shift: [0.5kx, -4.4ky]
       columns:
         x:
+      rows:
+        x:
+    extra_center_asym2:
+      key.asym: left
+      anchor:
+        ref: func_f6
+        shift: [0kx, -1ky]
+      columns:
+        x:
+        y:
       rows:
         x:
   rotate: -rotation
@@ -224,12 +234,12 @@ outlines:
     - what: circle
       radius: hole_radius
       where:
-        ref: [extra_center_asym_x_x]
+        ref: [extra_center_asym1_x_x]
         shift: [0kx, 3.7ky]
     - what: circle
       radius: hole_radius
       where:
-        ref: [extra_center_asym_x_x]
+        ref: [extra_center_asym1_x_x]
         shift: [0kx, -1.9ky]
 
     # Right
