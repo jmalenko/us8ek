@@ -94,7 +94,7 @@ points:
         ref: func_f12
         # Design: top row is aligned with Fn row
         # Ensure: Bottom row is aligned with "right matrix_outer_mod". This is done by modifying func.anchor.shift 2nd parameter
-        shift: [2.0kx, -5ky]
+        shift: [2.2kx, -5ky]
       columns:
         left:
           rows:
@@ -103,16 +103,15 @@ points:
               shift: [0.5kx, 0]
             top:
               shift: [-0.5kx, 0]
-        middle:
-          rows:
             num:
               width: 1.95kx
               shift: [0.5kx, 0]
             fn:
               shift: [-0.5kx, 0]
+        middle:
           rows.home.skip: true
-        right:
           rows.num.skip: true
+        right:
       rows:
         mod:
         bottom:
@@ -130,16 +129,26 @@ points:
       rows:
         x:
         y:
-    extra_right:
+    extra_right1: # -, [ keys, rotated
       key.asym: left
       anchor:
         ref: func_f12
-        shift: [kx, -1.5*ky] # Remember _usb_c_cutout
+        shift: [1.45*kx, -6.4*ky] # Remember cutout for usb connector
       columns:
         x:
       rows:
         x:
         y:
+      rotate: rotation
+    extra_right2: # F13
+      key.asym: left
+      anchor:
+        ref: func_f12
+        shift: [1.2*kx, 0*ky]
+      columns:
+        x:
+      rows:
+        x:
     extra_center_sym:
       anchor:
         ref: matrix_inner_bottom
