@@ -77,7 +77,7 @@ points:
       key.asym: left
       anchor:
         ref: matrix_outer_num
-        shift: [-1.72kx, 0.9ky] # Ensure: Gap between F6 and F7 is centered. This is done by modifying 1st parameter.
+        shift: [-1.72kx, 0.9ky] # Ensure: Gap between F6 and F7 is centered. (This is done by modifying 1st parameter.)
         rotate: rotation
       columns:
         esc:
@@ -101,8 +101,7 @@ points:
       anchor:
         ref: func_f12
         # Design: top row is aligned with Fn row
-        # Ensure: Bottom row is aligned with "right matrix_outer_mod". This is done by modifying func.anchor.shift 2nd parameter
-        shift: [2.2kx, -5ky]
+        shift: [2.2kx, -5ky + 5*0.05] # Workaround: correction "+ 5*0.05" is there to align the top-most row. This seems like an erogen bud.
       columns:
         left:
           rows:
@@ -235,13 +234,15 @@ outlines:
       radius: hole_radius
       where:
         ref: [extra_center_asym1_x_x]
-        shift: [0kx, 3.7ky]
+        shift: [0kx, -1.9ky]
+
+    # Top right-of-center
     - what: circle
       radius: hole_radius
       where:
         ref: [extra_center_asym1_x_x]
-        shift: [0kx, -1.9ky]
-
+        shift: [1.2kx, 3.7ky]
+    
     # Right
     - what: circle
       radius: hole_radius
