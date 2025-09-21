@@ -264,8 +264,13 @@ outlines:
     - what: circle
       radius: hole_radius
       where:
+        ref: [nav_right_num]
+        shift: [-0.7kx, 0.3ky]
+    - what: circle
+      radius: hole_radius
+      where:
         ref: [nav_right_home]
-        shift: [-0.6kx, 0.4ky]
+        shift: [-0.7kx, -0.3ky]
   _board_fillet:
     - what: outline
       name: board
