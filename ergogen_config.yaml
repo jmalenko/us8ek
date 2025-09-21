@@ -4,6 +4,11 @@
 # - monoblock, Fn and arrow kayes like X-Bows
 # - for ergo beginners => with num row like normal keyboard
 units:
+
+  # u unit provides a quick reference to the MX switch's 19mm
+  # U represents 19.05mm for keycaps that need a bit more breathing room
+  # cx and cy to reference the 18mm width and 17mm height of Choc keys
+
   # Constants
   choc_cap_x: 17.5
   choc_cap_y: 16.5
@@ -236,13 +241,13 @@ outlines:
         ref: [extra_center_asym1_x_x]
         shift: [0kx, -1.9ky]
 
-    # Top right-of-center
+    # Top center
     - what: circle
       radius: hole_radius
       where:
         ref: [extra_center_asym1_x_x]
-        shift: [1.2kx, 3.7ky]
-    
+        shift: [0kx, 2.7ky]
+
     # Right
     - what: circle
       radius: hole_radius
