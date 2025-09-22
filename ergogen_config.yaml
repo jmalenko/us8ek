@@ -274,7 +274,7 @@ outlines:
   _board_fillet:
     - what: outline
       name: board
-      fillet: 6
+      fillet: 3
   _switch_cutouts:
     - what: rectangle
       where: true
