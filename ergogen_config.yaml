@@ -274,7 +274,7 @@ outlines:
   _board_fillet:
     - what: outline
       name: board
-      fillet: 3
+      fillet: 4
   _switch_cutouts:
     - what: rectangle
       where: true
@@ -283,8 +283,8 @@ outlines:
       bound: false
   switch_plate:
     [ _board_fillet, -_switch_cutouts]
-  switch_plate_3dprint:
-    [ _board_fillet, -_switch_cutouts, -mounting_holes]
+  switch_plate_laser:
+    [ switch_plate, -mounting_holes]
 #pcbs:
 
 # Case is modelled in Fusion 360 based on switch_plate_3dprint.dxf
