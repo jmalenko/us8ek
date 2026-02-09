@@ -1,0 +1,285 @@
+# Jaromir's keyboard
+# Motivation / requirements:
+# - stagger and thumkeys like Kyria
+# - monoblock, Fn and arrow kayes like X-Bows
+# - for ergo beginners => with num row like normal keyboard
+units:
+  # Constants
+  choc_cap_x: 17.5
+  choc_cap_y: 16.5
+ 
+  choc_plate_thickness: 1.2
+  mx_plate_thickness: 1.5
+ 
+  # Parameters
+  kx: U
+  ky: U
+  rotation: 18 # the angle between the left and right side is double this value
+
+  # Case
+  plate_thickness: mx_plate_thickness
+  height_inner: 4
+  height_total: height_inner + 2 * plate_thickness
+
+  wall_thickness: 1
+  screw_radius: 1 # M2 screw
+  
+  # Threaded screw inserts.
+  # They're 3.2mm wide, and 3mm tall. All you need to do to add them to your design is create a hole that's 3mm in diameter and 3mm tall. Then you use a soldering iron to warm up the screw insert and melt the last 0.2mm of plastic.
+  nut_inner_radius: 1.5
+  nut_outer_radius: nut_inner_radius + 1.6
+  nut_height_real: 3
+  nut_height: nut_height_real + 0.5
+
+  hole_radius: screw_radius + 0.2
+  
+  # To check that that switch cutouts don't overlap with threaded screw inserts, use:
+  # hole_radius: nut_outer_radius
+points:
+  zones:
+    matrix:
+      columns:
+        outer:
+        pinky:
+          key.stagger: 0.2ky
+        ring:
+          key.stagger: 0.7ky
+        middle:
+          key.stagger: 0.4ky
+        index:
+          key.stagger: -0.4ky
+        inner:
+          key.stagger: -0.2ky
+      rows:
+        mod:
+        bottom:
+        home:
+        top:
+        num:
+    thumb:
+      anchor:
+        ref: matrix_inner_mod
+        shift: [1.15kx, -0.25ky]
+      columns:
+        x:
+          key.splay: -30
+      rows:
+        x:
+    extra_center_sym:
+      anchor:
+        ref: matrix_inner_bottom
+        shift: [kx, -0.1ky]
+      columns:
+        x:
+      rows:
+        x:
+    func:
+      key.asym: left
+      anchor:
+        ref: matrix_outer_num
+        shift: [-1.72kx, 0.9ky] # Ensure: Gap between F6 and F7 is centered. (This is done by modifying 1st parameter.)
+        rotate: rotation
+      columns:
+        esc:
+        f1:
+          key.spread: 1.2kx
+        f2:
+        f3:
+        f4:
+        f5:
+          key.spread: 1.2kx
+        f6:
+        f7:
+        f8:
+        f9:
+          key.spread: 1.2kx
+        f10:
+        f11:
+        f12:
+    nav:
+      key.asym: left
+      anchor:
+        ref: func_f12
+        # Design: top row is aligned with Fn row
+        shift: [2.2kx, -5ky + 5*0.05] # Workaround: correction "+ 5*0.05" is there to align the top-most row. This seems like an erogen bud.
+      columns:
+        left:
+          rows:
+            home:
+              width: 1.95kx
+              shift: [0.5kx, 0]
+            top:
+              shift: [-0.5kx, 0]
+            num:
+              width: 1.95kx
+              shift: [0.5kx, 0]
+            fn:
+              shift: [-0.5kx, 0]
+        middle:
+          rows.home.skip: true
+          rows.num.skip: true
+        right:
+      rows:
+        mod:
+        bottom:
+        home:
+        top:
+        num:
+        fn:
+    extra_left:
+      key.asym: left
+      anchor:
+        ref: func_esc
+        shift: [0, -2*ky]
+      columns:
+        x:
+      rows:
+        x:
+        y:
+    extra_right1: # -, [ keys, rotated
+      key.asym: left
+      anchor:
+        ref: func_f12
+        shift: [1.45kx, -6.53ky] # Remember cutout for usb connector
+      columns:
+        x:
+      rows:
+        x:
+        y:
+      rotate: rotation
+    extra_right2: # F13
+      key.asym: left
+      anchor:
+        ref: func_f12
+        shift: [1.2kx, 0ky]
+      columns:
+        x:
+      rows:
+        x:
+    extra_center_asym1:
+      key.asym: left
+      anchor:
+        ref: func_f6
+        shift: [0.5kx, -4.4ky]
+      columns:
+        x:
+      rows:
+        x:
+    extra_center_asym2:
+      key.asym: left
+      anchor:
+        ref: func_f6
+        shift: [0kx, -1ky]
+      columns:
+        x:
+        y:
+      rows:
+        x:
+  rotate: -rotation
+  mirror:
+    ref: matrix_inner_home
+    distance: 46
+outlines:
+  # Pure key outline.
+  _raw:
+    - what: rectangle
+      where: true
+      size: [kx+2, ky+2]
+  # Key outlines with 0.5mm removed to show key overlaps.
+  _keys:
+    - what: rectangle
+      where: true
+      size: [kx-0.5, ky-0.5]
+  # PCB board outline.
+  board:
+    - what: polygon
+      operation: stack
+      points:
+        - ref: func_esc
+          shift: [-0.5kx, 0.5ky]
+        - ref: func_esc
+          shift: [-0.5kx, -5.5ky]
+#        - ref: func_f1
+#          shift: [-0.4kx, -5.85ky]
+#        - ref: func_f1
+#          shift: [2.4kx, -5.85ky]
+        - ref: func_f6
+          shift: [-0.35kx, -7.25ky]
+        - ref: func_f7
+          shift: [0.35kx, -7.25ky]
+        - ref: nav_right_mod
+          shift: [-2.4kx, -0.5ky]
+        - ref: nav_right_mod
+          shift: [0.5kx, -0.5ky]
+        - ref: nav_right_fn
+          shift: [0.5kx, 0.5ky]
+  # Combination preview showing outline and keys.
+  check_key_overlaps:
+    [ board, -_keys]
+  mounting_holes:
+    # Left
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [matrix_outer_num]
+        shift: [-0.5kx, 0.6ky]
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [matrix_ring_mod]
+        shift: [0kx, -0.7ky]
+
+    # Center
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [extra_center_asym1_x_x]
+        shift: [0kx, -1.9ky]
+
+    # Top right-of-center
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [extra_center_asym1_x_x]
+        shift: [1.2kx, 3.7ky]
+    
+    # Right
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [mirror_matrix_outer_num]
+        shift: [-0.5kx, 0.6ky]
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [mirror_matrix_ring_mod]
+        shift: [0kx, -0.7ky]
+
+    # Num
+    - what: circle
+      radius: hole_radius
+      where:
+        ref: [nav_right_home]
+        shift: [-0.6kx, 0.4ky]
+  _board_fillet:
+    - what: outline
+      name: board
+      fillet: 6
+  _switch_cutouts:
+    - what: rectangle
+      where: true
+      asym: source
+      size: 14 # Plate cutouts are 14mm * 14mm for both MX and Choc
+      bound: false
+  switch_plate:
+    [ _board_fillet, -_switch_cutouts]
+  switch_plate_3dprint:
+    [ _board_fillet, -_switch_cutouts, -mounting_holes]
+#pcbs:
+
+# Case is modelled in Fusion 360 based on switch_plate_3dprint.dxf
+#cases:
+#  switch_plate:
+#    - what: outline
+#      name: switch_plate
+#      extrude: plate_thickness
