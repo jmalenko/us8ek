@@ -66,11 +66,27 @@ This data confirms what many developers and content creators experience daily - 
 ![Key layout](10-design/out/layout.png) generated in Ergogen
 
 ### Hardware Components
-- **Controller:** [Frood RP2040](https://42keebs.eu/shop/parts/controllers/frood-rp2040-pro-micro-controller/) - Ample GPIO for full feature set
-- **Switches:** Glorious PC Gaming Race Gateron (120-pack) - Consistent, reliable actuation
-- **Diodes:** 1N4148 - Professional-grade signal isolation
-- **Keycaps:** MT3 profile - Ergonomic sculpting with premium feel
-- **Plate:** Laser-cut steel
+- **Controller:** [Frood RP2040](https://42keebs.eu/shop/parts/controllers/frood-rp2040-pro-micro-controller/) - has 25 I/O pins. The keyboard actually uses only 23 pins, so any Pro Micro microcontroller can be used.
+- **Switches:** Glorious PC Gaming Race Gateron (120-pack); or any other switches
+- **Diodes:** 1N4148 - get pack of 100 pieces
+- **Wire:** 17 AWG = 1.04 mm² nicely fits between switch leg and stem
+- **Keycaps:** MT3 profile - Ergonomic sculpting with premium feel; or any other keycaps 
+- **Plate:** Laser-cut steel. See build guide.
+
+### Build guide
+
+1. Study **Primary guides** below. 
+
+2. Get componenents.
+
+   2.1. Laser cut the plate.
+
+   2.2. Order hardare components.
+
+3. Build - Solder it together.
+
+4. Configure microcontroller.
+
 
 ### Software
 [KMK](https://github.com/KMKfw/kmk_firmware)
