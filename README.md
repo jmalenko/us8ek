@@ -79,14 +79,31 @@ This data confirms what many developers and content creators experience daily - 
 
 2. Get componenents.
 
-   2.1. Laser cut the plate.
+   2.1. Laser cut the [plate](10-design/out/switch_plate_3dprint.dxf).
 
    2.2. Order hardare components.
 
 3. Build - Solder it together.
 
+   - Q: Which columns/rows shall be soldered to which pin?
+
+     A: You can use any reasonable pin (not power, ground or USB-C). If you wire it according to the following diagrame, then you don't need to modify the configuration in *kb.py*.
+
+     TODO Add diagram.
+
 4. Configure microcontroller.
 
+   4.1. Setup CircuitPython.
+
+        Documentation and download are available at [https://circuitpython.org/board/42keebs_frood/](https://circuitpython.org/board/42keebs_frood/).
+
+   4.2. Copy kmk & your configuration to the microcontroller.
+        
+        Copy [20-sw/20-kmk/*](20-sw/20-kmk) to root of your microcontroller. (So, there will be a *kmk* directory and *boot.py*, *main.py* and *kb.py* files in the root.)
+
+5. Optional: Customize your configuration in *main.py*.
+   
+   See [kmk_firmware documentation](https://github.com/KMKfw/kmk_firmware/tree/main/docs/en). 
 
 ### Software
 [KMK](https://github.com/KMKfw/kmk_firmware)
