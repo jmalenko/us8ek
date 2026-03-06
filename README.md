@@ -70,8 +70,9 @@ This data confirms what many developers and content creators experience daily - 
 - **Switches:** Glorious PC Gaming Race Gateron (120-pack); or any other switches
 - **Diodes:** 1N4148 - get pack of 100 pieces
 - **Wire:** 17 AWG = 1.04 mm² nicely fits between switch leg and stem
-- **Keycaps:** MT3 profile - Ergonomic sculpting with premium feel; or any other keycaps 
+- **Keycaps:** MT3 profile - Ergonomic sculpting with premium feel; or any other keycaps. 101 pieces in total, some narrower keycaps are available in this project and must be 3d printed.
 - **Plate:** Laser-cut steel. See build guide.
+- **Case:** 3D printed, PLA. 8 pieces of M2x12 (M2 screw, lenght 12 mm), 8 pieces of  het insert M2x4 (for M2 screw, length 4 mm).
 
 ### Build guide
 
