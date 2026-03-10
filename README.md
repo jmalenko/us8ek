@@ -154,3 +154,4 @@ This data confirms what many developers and content creators experience daily - 
 
 ### Future Enhancements
 - [ ] Add a key next to backspace (Currently, backspace is a 2u key and we can add one more key to the layout)
+- [ ] Ask the original aouthor of MT3 keycaps to make the taller Fn keycaps and shorter 1u spacebar. (The author published STL files of some of these, but modifying them is complicated work. Moreover, modifications of STL are not ideal: The taller keycaps seems ok, but the stem start higher than required. The shorter keycaps are complicated because there is not enough space for the switch. That's when a simple scaling in the vertical direction is used.)
