@@ -20,6 +20,7 @@ The perfect balance of familiarity and ergonomics with this innovative unibody s
 - **Complete navigation cluster** - Dedicated arrows, modifiers, and function keys for seamless transition from standard keyboards
 - **Fully open source** - Hardware and firmware available to the community
 
+![Wiring](70-photo/PXL_20260205_193127938.jpg)
 
 ## Design Philosophy
 
@@ -71,8 +72,8 @@ This data confirms what many developers and content creators experience daily - 
 - **Diodes:** 1N4148 - get pack of 100 pieces
 - **Wire:** 17 AWG = 1.04 mm² nicely fits between switch leg and stem
 - **Keycaps:** MT3 profile - Ergonomic sculpting with premium feel; or any other keycaps. 101 pieces in total, some narrower keycaps are available in this project and must be 3d printed.
-- **Plate:** Laser-cut steel. See build guide.
-- **Case:** 3D printed, PLA. 8 pieces of M2x12 (M2 screw, lenght 12 mm), 8 pieces of  het insert M2x4 (for M2 screw, length 4 mm).
+- **Plate:** Laser-cut steel. 1.5 mm thick.
+- **Case:** 3D printed, PLA. 8 pieces of M2x12 (M2 screw, lenght 12 mm), 8 pieces of heat insert M2x4 (for M2 screw, length 4 mm).
 
 ### Build guide
 
