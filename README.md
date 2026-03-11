@@ -35,7 +35,7 @@ backspace: 2,723
 a:           854    (most used letter)
 ```
 
-This data confirms what many developers and content creators experience daily - we spend more time navigating code, file systems, and documents than typing new content. **JMKB prioritizes this reality.**
+This data confirms what many developers and content creators experience daily - we spend more time navigating code, file systems, and documents than typing new content. **US8EK prioritizes this reality.**
 
 **Effortless hotkey access** - Complex shortcuts like IntelliJ's `Ctrl + Alt + F9` (Force Run to Cursor) remain natural and quick. No more layer juggling or muscle memory retraining.
 

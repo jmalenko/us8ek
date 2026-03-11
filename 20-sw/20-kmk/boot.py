@@ -12,5 +12,5 @@ bootcfg(
     # storage = False,
     usb_id = {
         'manufacturer': 'JM', 
-        'product': 'JMKB: Unibody Split Keyboard with Arrow Keys'},
+        'product': 'US8EK: Unibody Split Keyboard with Arrow Keys'},
 )
