@@ -2,7 +2,7 @@
 
 ```
 unibody split 80% ergo keyboard
-─────── ───── ─── ────
+───┬─── ──┬── ─┬─ ─┬──
    │      │    │   │
    │      │    │   └─── orthogonal key layout 
    │      │    └─────── Fn, arrow and navigation keys, no numpad
