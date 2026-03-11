@@ -84,7 +84,7 @@ This data confirms what many developers and content creators experience daily - 
 
 3. Build - Solder it together.
 
-   Aktual wiring:
+   Actual wiring:
 
    ![Wiring](70-photo/PXL_20260205_193127938.jpg)
 
