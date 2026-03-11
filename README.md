@@ -2,12 +2,12 @@
 
 ```
 unibody split 80% ergo keyboard
-------- ----- --- ----
-   |      |    |   |
-   |      |    |   \--- orthogonal key layout 
-   |      |    \------- Fn, arrow and navigation keys, no numpad
-   |      \------------ rotated halves
-   \------------------- one piece
+─────── ───── ─── ────
+   │      │    │   │
+   │      │    │   └─── orthogonal key layout 
+   │      │    └─────── Fn, arrow and navigation keys, no numpad
+   │      └──────────── rotated halves
+   └─────────────────── one piece
 ```
 
 ![Keyloard](70-photo/PXL_20260205_193432638.jpg)
