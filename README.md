@@ -20,6 +20,7 @@ The perfect balance of familiarity and ergonomics with this innovative unibody s
 - **Complete navigation cluster** - Dedicated arrows, modifiers, and function keys for seamless transition from standard keyboards
 - **Fully open source** - Hardware and firmware available to the community
 
+![Wiring](70-photo/PXL_20260205_193127938.jpg)
 
 ## Design Philosophy
 
