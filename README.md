@@ -27,13 +27,13 @@ Real-world usage analysis (by the author, Jaromír Malenko) revealed a striking 
 
 **Usage statistics:**
 ```
-down: 11,952    (most used key!)
-up: 10,320      
-right: 7,115    
-left: 6,239     
+down:     11,952    (most used key!)
+up:       10,320      
+right:     7,115    
+left:      6,239     
 backspace: 2,723
 ...
-a: 854          (most used letter)
+a:           854    (most used letter)
 ```
 
 This data confirms what many developers and content creators experience daily - we spend more time navigating code, file systems, and documents than typing new content. **JMKB prioritizes this reality.**
@@ -44,8 +44,7 @@ This data confirms what many developers and content creators experience daily - 
 
 **Unibody meets ergonomics** - Enjoy the comfort of split design without the frustration of shifting halves or cable management between sections.
 
-
-## Lessons from Real Experience
+### Lessons from Real Experience
 
 **Kyria insights:**
 - ✅ Validated matrix layout comfort
@@ -57,7 +56,7 @@ This data confirms what many developers and content creators experience daily - 
 - ✅ Confirmed unibody preference
 - ❌ Proprietary limitations (keycap compatibility, missing home/end keys)
 
-**JMKB synthesis:** Combines the best aspects while addressing every pain point encountered.
+**US8EK synthesis:** Combines the best aspects while addressing every pain point encountered.
 
 
 ## Technical Solution
@@ -71,8 +70,8 @@ This data confirms what many developers and content creators experience daily - 
 - **Diodes:** 1N4148 - get pack of 100 pieces
 - **Wire:** 17 AWG = 1.04 mm² nicely fits between switch leg and stem
 - **Keycaps:** MT3 profile - Ergonomic sculpting with premium feel; or any other keycaps. 101 pieces in total, some narrower keycaps are available in this project and must be 3d printed.
-- **Plate:** Laser-cut steel. See build guide.
-- **Case:** 3D printed, PLA. 8 pieces of M2x12 (M2 screw, lenght 12 mm), 8 pieces of  het insert M2x4 (for M2 screw, length 4 mm).
+- **Plate:** Laser-cut steel. 1.5 mm thick.
+- **Case:** 3D printed, PLA. 8 pieces of M2x12 (M2 screw, lenght 12 mm), 8 pieces of heat insert M2x4 (for M2 screw, length 4 mm).
 
 ### Build guide
 
@@ -86,9 +85,13 @@ This data confirms what many developers and content creators experience daily - 
 
 3. Build - Solder it together.
 
+![Wiring](70-photo/PXL_20260205_193127938.jpg)
+
+![Wiring plan](11-wiring\wiring-plan.tiff)
+
    - Q: Which columns/rows shall be soldered to which pin?
 
-     A: You can use any reasonable pin (not power, ground or USB-C). If you wire it according to the following diagrame, then you don't need to modify the configuration in *kb.py*.
+     A: You can use any reasonable pin (not power, ground or USB-C). If you wire it according to the following diagram, then you don't need to modify the configuration in `kb.py`.
 
      TODO Add diagram.
 
@@ -105,9 +108,6 @@ This data confirms what many developers and content creators experience daily - 
 5. Optional: Customize your configuration in *main.py*.
    
    See [kmk_firmware documentation](https://github.com/KMKfw/kmk_firmware/tree/main/docs/en). 
-
-### Software
-[KMK](https://github.com/KMKfw/kmk_firmware)
 
 
 ## Resources & Inspiration
@@ -139,6 +139,7 @@ This data confirms what many developers and content creators experience daily - 
 
 - [Pro Micro & Fio V3 Hookup Guide](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-overview-pro-micro)
 - [nice!nano](https://nicekeyboards.com/docs/nice-nano/)
+- [KMK](https://github.com/KMKfw/kmk_firmware)
 
 **Keyoboards**
 - [X-Bows Nature](https://x-bows.com/products/x-bows-nature)
@@ -153,5 +154,6 @@ This data confirms what many developers and content creators experience daily - 
 ## Project Plan
 
 ### Future Enhancements
+- [ ] Wiring diagram
 - [ ] Add a key next to backspace (Currently, backspace is a 2u key and we can add one more key to the layout)
 - [ ] Ask the original aouthor of MT3 keycaps to make the taller Fn keycaps and shorter 1u spacebar. (The author published STL files of some of these, but modifying them is complicated work. Moreover, modifications of STL are not ideal: The taller keycaps seems ok, but the stem start higher than required. The shorter keycaps are complicated because there is not enough space for the switch. That's when a simple scaling in the vertical direction is used.)
