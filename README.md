@@ -20,8 +20,6 @@ The perfect balance of familiarity and ergonomics with this innovative unibody s
 - **Complete navigation cluster** - Dedicated arrows, modifiers, and function keys for seamless transition from standard keyboards
 - **Fully open source** - Hardware and firmware available to the community
 
-![Wiring](70-photo/PXL_20260205_193127938.jpg)
-
 ## Design Philosophy
 
 Real-world usage analysis (by the author, Jaromír Malenko) revealed a striking truth: navigation keys dominate our daily keyboard interactions. Running [KeyboardFrequencies](https://github.com/PeterTheobald/KeyboardFrequencies) for one week showed navigation keys are used **14× more** than the most frequent alphanumeric key!
@@ -86,9 +84,13 @@ This data confirms what many developers and content creators experience daily - 
 
 3. Build - Solder it together.
 
-![Wiring](70-photo/PXL_20260205_193127938.jpg)
+   Aktual wiring:
 
-![Wiring plan](11-wiring\wiring-plan.tiff)
+   ![Wiring](70-photo/PXL_20260205_193127938.jpg)
+
+   Wiring plan:
+
+   ![Wiring plan](11-wiring/wiring-plan.png)
 
    - Q: Which columns/rows shall be soldered to which pin?
 
