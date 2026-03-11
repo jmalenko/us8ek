@@ -117,15 +117,17 @@ This data confirms what many developers and content creators experience daily - 
 
 **Primary guides**
 - Let's Design A Keyboard With Ergogen:
-  [Part 1 - Units & Points](https://flatfootfox.com/ergogen-part1-units-points/),
-  [Part 2 - Outlines](https://flatfootfox.com/ergogen-part2-outlines/),
-  [Part 3 - PCB](https://flatfootfox.com/ergogen-part3-pcbs/),
-  [Part 4 - Offline Ergogen, External Footprints, & Cases](https://flatfootfox.com/ergogen-part4-footprints-cases/),
-  [Part 5 - KiCAD, Firmwares, & Assembly](https://flatfootfox.com/ergogen-part5-kicad-firmware-assembly/)
+  - [Part 1 - Units & Points](https://flatfootfox.com/ergogen-part1-units-points/),
+  - [Part 2 - Outlines](https://flatfootfox.com/ergogen-part2-outlines/),
+  - [Part 3 - PCB](https://flatfootfox.com/ergogen-part3-pcbs/),
+  - [Part 4 - Offline Ergogen, External Footprints, & Cases](https://flatfootfox.com/ergogen-part4-footprints-cases/),
+  - [Part 5 - KiCAD, Firmwares, & Assembly](https://flatfootfox.com/ergogen-part5-kicad-firmware-assembly/)
 
 - [How to Build a Handwired Keyboard](https://www.youtube.com/watch?v=hjml-K-pV4E&t=554s) by Joe Scotto
 
 - [Frood](https://github.com/piit79/Frood) microcontroller documentation
+
+- [KMK](https://github.com/KMKfw/kmk_firmware)
 
 **Research**
 - Community inspiration for **wiring**. I did not want to use heatshrink and strip the wire; ale I wanter to use diode legs instead of a wire.
@@ -142,7 +144,6 @@ This data confirms what many developers and content creators experience daily - 
 
 - [Pro Micro & Fio V3 Hookup Guide](https://learn.sparkfun.com/tutorials/pro-micro--fio-v3-hookup-guide/hardware-overview-pro-micro)
 - [nice!nano](https://nicekeyboards.com/docs/nice-nano/)
-- [KMK](https://github.com/KMKfw/kmk_firmware)
 
 **Keyoboards**
 - [X-Bows Nature](https://x-bows.com/products/x-bows-nature)
