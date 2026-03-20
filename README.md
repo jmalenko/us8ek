@@ -10,7 +10,7 @@ unibody split 80% ergo keyboard
    └─────────────────── one piece
 ```
 
-![Keyloard](70-photo/PXL_20260205_193432638.jpg)
+![Keyloard](70-photo/PXL_20260318_181638000-final.jpg)
 
 **An ergonomic mechanical keyboard designed for developers and power users**
 
