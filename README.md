@@ -86,7 +86,7 @@ This data confirms what many developers and content creators experience daily - 
 
    Actual wiring:
 
-   ![Wiring](70-photo/PXL_20260205_193127938.jpg)
+   ![Wiring](70-photo/PXL_20260205_193127938-wiring.jpg)
 
    Wiring plan:
 
